@@ -10,14 +10,14 @@ import torch
 
 def download_model():
     # do a dry run of loading the huggingface model, which will download weights
-    MODEL_NAME = "databricks/dolly-v2-12b"
+    MODEL_NAME = "mosaicml/mpt-7b-chat"
 
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_NAME,
         torch_dtype=torch.bfloat16,
         trust_remote_code=True,
-        device_map="auto",
+        max_seq_len=8192
     )
 
 
