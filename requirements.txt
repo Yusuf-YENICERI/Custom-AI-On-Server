@@ -1,8 +1,6 @@
 potassium
+sanic==22.6.2
 websockets==10.0
-einops
-gradio
-torch
 transformers
-numpy
-sentencepiece
+accelerate>=0.12.0
+einops
