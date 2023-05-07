@@ -3,3 +3,5 @@ sanic==22.6.2
 websockets==10.0
 transformers[torch]==4.25.1
 accelerate>=0.12.0
+einops
+flash_attn
