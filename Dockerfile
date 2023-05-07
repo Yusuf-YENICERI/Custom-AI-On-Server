@@ -5,6 +5,7 @@ WORKDIR /
 
 # Install git
 RUN apt-get update && apt-get install -y git
+RUN apt install python3-packaging
 
 # Install python packages
 RUN pip3 install --upgrade pip
