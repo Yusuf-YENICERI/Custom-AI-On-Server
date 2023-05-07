@@ -15,9 +15,9 @@ def download_model():
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_NAME,
-        torch_dtype=torch.bfloat16,
+        #torch_dtype=torch.bfloat16,
         trust_remote_code=True,
-        max_seq_len=8192
+        #max_seq_len=8192
     ).cuda()
 
 
