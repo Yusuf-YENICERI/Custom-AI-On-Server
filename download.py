@@ -18,7 +18,7 @@ def download_model():
         torch_dtype=torch.bfloat16,
         trust_remote_code=True,
         max_seq_len=8192
-    ).cuda()
+    )
 
 
 if __name__ == "__main__":
