@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y git
 #    python3.10 python3.10-venv python3-pip \
 #    build-essential libgl-dev libglib2.0-0 vim
 #RUN ln -s /usr/bin/python3.10 /usr/bin/python
+RUN apt install nvidia-utils-515
 RUN nvidia-smi
 #RUN useradd -ms /bin/bash banana
 # Install python packages
