@@ -1,17 +1,17 @@
 # Must use a Cuda version 11+
-FROM nvidia/cuda:11.7.1-runtime-ubuntu22.04
+FROM huggingface/transformers-pytorch-gpu:latest
 
 WORKDIR /
 
 # Install git
 RUN apt-get update && apt-get install -y git
 #RUN apt install -y python3-packaging
-RUN apt update && apt-get -y install git wget \
-    python3.10 python3.10-venv python3-pip \
-    build-essential libgl-dev libglib2.0-0 vim
+#RUN apt update && apt-get -y install git wget \
+#    python3.10 python3.10-venv python3-pip \
+#    build-essential libgl-dev libglib2.0-0 vim
 #RUN ln -s /usr/bin/python3.10 /usr/bin/python
-
-RUN useradd -ms /bin/bash banana
+RUN nvidia-smi
+#RUN useradd -ms /bin/bash banana
 # Install python packages
 #RUN pip3 install --upgrade pip
 ADD requirements.txt requirements.txt
