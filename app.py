@@ -27,7 +27,7 @@ def init():
         torch_dtype=torch.bfloat16,
         trust_remote_code=True,
         max_seq_len=8192
-    ).cuda(
+    )
     
     print(f"Successfully loaded the model into memory")
     
